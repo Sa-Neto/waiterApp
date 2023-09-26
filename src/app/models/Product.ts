@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 
-export const  Category = model('Category', new Schema({
+export const  Product = model('Product', new Schema({
   name: {
     type: String,
     required: true,
@@ -9,7 +9,7 @@ export const  Category = model('Category', new Schema({
     type: String,
     required: true,
   },
-  imagemPath: {
+  imagePath: {
     type: String,
     required: true,
   },
@@ -19,7 +19,7 @@ export const  Category = model('Category', new Schema({
   },
   ingredients: [{
     name:{
-      type:Number,
+      type:String,
       required:true
     },
     icon:{
