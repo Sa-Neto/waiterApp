@@ -11,7 +11,6 @@ mongoose.connect('mongodb://localhost:27017/waiterApp')
     app.use('/uploads',express.static(path.resolve(__dirname,'..','uploads')));
     app.use(express.json());
     app.use(router);
-    2:58:11
     app.listen(port, () => {
       console.log(`Server is running on http://localhost:${port}`);
     });
