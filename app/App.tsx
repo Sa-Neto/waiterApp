@@ -15,6 +15,8 @@ export default function App() {
 
   return (
     <>
+    1:53:42
+      {/* vai determinar a cor da status bar do celular */}
       <StatusBar style="dark" />
       <Main/>
     </>
