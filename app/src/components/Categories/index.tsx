@@ -8,7 +8,8 @@ export function Categories() {
 
   function handleSelectCategory(categoryId: string) {
     const category = selectedCategory === categoryId ? '' : categoryId ;
-    setSelectedCategory(categoryId);
+
+    setSelectedCategory(category);
 
   }
   return (
