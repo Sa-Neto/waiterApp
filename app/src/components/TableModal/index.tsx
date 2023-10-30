@@ -12,13 +12,21 @@ import { Button } from '../../Button';
 import { useState} from 'react';
 
 interface TableModalProps{
-  visible: boolean
+  visible: boolean;
   onClose: () => void;
+  onSave: (table:string) => void;
 }
 
-export default function TableModal({visible,onClose}: TableModalProps) {
-  const [table,setTable] = useState('');
+export default function TableModal({
+  visible,onClose,onSave}: TableModalProps
 
+) {
+  const [table,setTable] = useState('');
+  function handleSave(){
+    setTable('');
+    onSave(table);
+    onClose();
+  }
   return (
     <Modal
       visible={visible}
@@ -41,9 +49,10 @@ export default function TableModal({visible,onClose}: TableModalProps) {
               placeholderTextColor="#666"
               keyboardType="number-pad"
               onChangeText={setTable}
+              value={table}
             />
             <Button
-              onPress={() => alert(table)}
+              onPress={() => handleSave() }
               disabled={table.length === 0 }
             >
               Salvou!
