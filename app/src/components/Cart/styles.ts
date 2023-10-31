@@ -15,7 +15,7 @@ export const ProductContainer = styled.View`
 export const Actions = styled.View`
 flex-direction: row;
 `;
-export const ActionsPlus = styled.View`
+export const ActionsPlus = styled.TouchableOpacity`
 margin-right: 24px;
 `;
 
@@ -43,7 +43,7 @@ export const ProductDetailsName = styled.Text`
   color: #666 ;
 `;
 export const ProductDetailsPrice = styled.Text`
-  size: 14px;
+  font-size: 14px;
   font-weight: 600;
   margin-top: 4px;
 `;
@@ -60,6 +60,7 @@ export const TotalContainer = styled.View`
 export const TotalText = styled.Text`
   color: #666;
 `;
+
 export const TotalPrice = styled.Text`
   font-size: 20px;
   font-weight: 600;
